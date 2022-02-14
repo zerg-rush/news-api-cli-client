@@ -80,7 +80,7 @@ class HelpersTest {
     }
 
     @Test
-    void fileExists__ShouldResultTrueWhenFileExists(@TempDir Path tempDir) throws IOException {
+    void fileExists_ShouldResultTrueWhenFileExists(@TempDir Path tempDir) throws IOException {
         final var dummyFile = tempDir.resolve("foo.txt");
         final var expected = true;
 
@@ -91,7 +91,7 @@ class HelpersTest {
     }
 
     @Test
-    void fileExists__ShouldResultFalseWhenFileDoesNotExist(@TempDir Path tempDir) {
+    void fileExists_ShouldResultFalseWhenFileDoesNotExist(@TempDir Path tempDir) {
         final var dummyFile = tempDir.resolve("foo.txt");
         final var expected = false;
 
