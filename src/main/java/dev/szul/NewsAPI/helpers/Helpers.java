@@ -19,7 +19,10 @@ public class Helpers {
         final var message = ERROR_EXIT_CODES_DESCRIPTIONS.get(exitCode);
 
         if (exitCode != 0 || !extensionMessage.isEmpty()) {
-            System.out.println(message + extensionMessage);
+            System.out.println(message);
+        }
+        if (!extensionMessage.isEmpty()) {
+            System.out.println(System.lineSeparator() + extensionMessage);
         }
         System.exit(exitCode);
     }
